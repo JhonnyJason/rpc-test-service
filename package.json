@@ -9,7 +9,7 @@
         "watch-live": "lsc -o toolset/build/js/ -cw sources/source/*/*.ls",
         "link-all-js-and-json": "toolset/thingy-build-system/link-all-js-and-json.js",
         "ncu-update": "ncu -u",
-        "reinstall": "npm install",
+        "reinstall": "pnpm install",
         "update-packages": "run-s -ns ncu-update reinstall",
         "module-gen": "thingy-module-gen --",
         "sync-allmodules": "thingy-allmodules-sync",
@@ -22,7 +22,7 @@
         "sourcemodule-to-dir": "run-s \"sourcemodulecreate directory,{1}\" --",
         "push": "thingysync push --message",
         "pull": "thingysync pull",
-        "postinstall": "npm run initialize-thingy",
+        "postinstall": "pnpm run initialize-thingy",
         "initialize-thingy": "run-s -ns create-build-directories copy-ressources create-cert build",
         "prepare-webpack": "run-s rebuild-webpack-config patch-stuff",
         "bundle": "webpack-cli --config .build-config/webpack-deploy.config.js",
@@ -53,15 +53,14 @@
     "dependencies": {
         "coffeescript": "^2.7.0",
         "livescript": "^1.6.0",
-        "npm-check-updates": "^16.10.12",
+        "npm-check-updates": "^17.1.10",
         "npm-run-all": "^4.1.5",
         "thingy-allmodules-sync": "^0.2.0",
         "thingy-module-gen": "^0.1.6",
         "thingymodulecreate": "^0.1.8",
         "thingysync": "^0.1.2",
         "thingy-debug": "^0.0.1",
-        "webpack": "^5.82.1",
-        "webpack-cli": "^5.1.1",
-        "thingy-sci-base": "^0.0.4"
+        "webpack": "^5.96.1",
+        "webpack-cli": "^5.1.4"
     }
 }
